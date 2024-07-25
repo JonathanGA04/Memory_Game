@@ -3,6 +3,7 @@ package com.example.memory_game
 import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
@@ -83,12 +84,70 @@ class MainActivity : AppCompatActivity() {
         ib_sonido.setColorFilter(Color.GREEN)
         sonido("background", true)
 
-    }
+        //tag: sirve para saber la posicion de la imagen
+        iv_11.tag = "0"
+        iv_12.tag = "1"
+        iv_13.tag = "2"
+        iv_14.tag = "3"
+        iv_21.tag = "4"
+        iv_22.tag = "5"
+        iv_23.tag = "6"
+        iv_24.tag = "7"
+        iv_31.tag = "8"
+        iv_32.tag = "9"
+        iv_33.tag = "10"
+        iv_34.tag = "11"
 
-    private fun sonido(sonido: String, loop: Boolean= false) {
-        var resID = resources.getIdentifier(sonido, "raw", packageName)
-            if(sonido == "background"){
+        barcelona = R.drawable.barcelona
+        real = R.drawable.real
+        valencia = R.drawable.valencia
+        socie = R.drawable.socie
+        atletic = R.drawable.atletic
+        atleticom = R.drawable.atleticom
+        betis = R.drawable.betis
+
+        imagenesArray.shuffle()
+
+        tv_j1 = findViewById(R.id.tv_1)
+        tv_j2 = findViewById(R.id.tv_2)
+
+
+        tv_j2.setTextColor(Color.GRAY)
+        tv_j1.setTextColor(Color.WHITE)
+
+    }
+     //Metodo para utilizar el sonido en general
+    private fun sonido(sonidoName: String, loop: Boolean= false) {
+        var resID = resources.getIdentifier(sonidoName, "raw", packageName)
+            if(sonidoName == "background"){
                 mpFondo = MediaPlayer.create(this, resID)
+                mpFondo.isLooping = loop
+                mpFondo.setVolume(0.04F,0.4F)
+                if (!mpFondo.isPlaying){
+                    mpFondo.start()
+                }
+            }else{
+                mp = MediaPlayer.create(this, resID)
+                mp.setOnCompletionListener (MediaPlayer.OnCompletionListener { mediaPlayer ->
+                    mediaPlayer.stop()
+                    mediaPlayer.release()
+                })
+                if (!mp.isPlaying){
+                    mp.start()
+                }
             }
+    }
+    fun musicFondo(v: View){
+        if (escuchar){
+            mpFondo.pause()
+            ib_sonido.setImageResource(R.drawable.ic_volume_off_24)
+            ib_sonido.setColorFilter(Color.GRAY)
+        }else{
+            mpFondo.start()
+            ib_sonido.setImageResource(R.drawable.ic_volume_on)
+            ib_sonido.setColorFilter(Color.GREEN)
+
+        }
+        escuchar = !escuchar
     }
 }
