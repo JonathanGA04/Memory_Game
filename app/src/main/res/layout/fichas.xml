@@ -15,28 +15,32 @@
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ocultar" />
+            app:srcCompat="@drawable/ocultar"
+            android:onClick="seleccionar"/>
 
         <ImageView
             android:id="@+id/iv_12"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ocultar" />
+            app:srcCompat="@drawable/ocultar"
+            android:onClick="seleccionar"/>
 
         <ImageView
             android:id="@+id/iv_13"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ocultar" />
+            app:srcCompat="@drawable/ocultar"
+            android:onClick="seleccionar"/>
 
         <ImageView
             android:id="@+id/iv_14"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ocultar" />
+            app:srcCompat="@drawable/ocultar"
+            android:onClick="seleccionar"/>
     </LinearLayout>
 
     <LinearLayout
@@ -49,28 +53,32 @@
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ocultar" />
+            app:srcCompat="@drawable/ocultar"
+            android:onClick="seleccionar"/>
 
         <ImageView
             android:id="@+id/iv_22"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ocultar" />
+            app:srcCompat="@drawable/ocultar"
+            android:onClick="seleccionar"/>
 
         <ImageView
             android:id="@+id/iv_23"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ocultar" />
+            app:srcCompat="@drawable/ocultar"
+            android:onClick="seleccionar"/>
 
         <ImageView
             android:id="@+id/iv_24"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ocultar" />
+            app:srcCompat="@drawable/ocultar"
+            android:onClick="seleccionar"/>
     </LinearLayout>
 
     <LinearLayout
@@ -83,27 +91,31 @@
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ocultar" />
+            app:srcCompat="@drawable/ocultar"
+            android:onClick="seleccionar"/>
 
         <ImageView
             android:id="@+id/iv_32"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ocultar" />
+            app:srcCompat="@drawable/ocultar"
+            android:onClick="seleccionar"/>
 
         <ImageView
             android:id="@+id/iv_33"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ocultar" />
+            app:srcCompat="@drawable/ocultar"
+            android:onClick="seleccionar"/>
 
         <ImageView
             android:id="@+id/iv_34"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ocultar" />
+            app:srcCompat="@drawable/ocultar"
+            android:onClick="seleccionar"/>
     </LinearLayout>
 </LinearLayout>
